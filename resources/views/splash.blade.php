@@ -25,33 +25,38 @@
         <img src="media/ryan.png" class="img-circle img-responsive">
       </div>
       <div class="site-wrapper-lower">
-        <div class="tabs-wrapper">
-          <div id="tabs">
-            <ul class="nav info-nav">
-              <li class="inactive"><a href="#menu1">My Card</a></li>
-              <li class="inactive"><a href="#menu2">Resume</a></li>
-              <li class="inactive"><a href="#menu3">My Projects</a></li>
-              <li class="inactive"><a href="#menu4">The Old Site</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="menu1" class="">
-                <h3>Menu 1</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-              <div id="menu2" class="">
-                <h3>Menu 2</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-              </div>
-              <div id="menu3" class="">
-                <h3>Menu 3</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              </div>
-              <div id="menu4" class="">
-                <h3>Menu 3</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              </div>
+        <div id="tabs">
+          <ul class="nav info-nav">
+            <li class="inactive"><a href="#menu1">My Card</a></li>
+            <li class="inactive"><a href="#menu2">Resume</a></li>
+            <li class="inactive"><a href="#menu3">My Projects</a></li>
+            <li class="inactive"><a href="#menu4">The Old Site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div id="menu1">
+          <div class='container'>
+            <div class='single-item img-responsive'>
+              <img src="media/sd.jpeg" class="img-responsive">
+              <img src="media/lw.jpg" class="img-responsive">
             </div>
           </div>
+        </div>
+        <div id="menu2">
+          <div class="resume-container">
+            <div class="resume">
+              <iframe src="http://docs.google.com/gview?url=https://drive.google.com/uc?id=0Bws0QSYGC_1ldnpxOERidGY1S0U&embedded=true" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="menu3">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <div id="menu4">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
       </div>
     </div>

@@ -6,10 +6,11 @@
  */
 
 require('./bootstrap');
-require('./navbar.js');
 require('./jquery-ui.min.js');
-
-
+require('./jquery-migrate-1.2.1.min.js');
+require('./slick.min.js');
+require('./mycard.js');
+require('./navbar.js');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
