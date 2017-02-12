@@ -51,7 +51,9 @@
           </div>
         </div>
         <div id="menu3">
-          <h3>Menu 3</h3>
+          <div class="github-wrap">
+            <img src="media/GitHub_Logo.png" class="img-responsive">
+          </div>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
         <div id="menu4">
