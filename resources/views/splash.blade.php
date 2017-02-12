@@ -19,25 +19,39 @@
   <body>
     <div class="site-wrapper">
       <div class="site-wrapper-upper">
-        <div class="cover-container">
-          <div class="inner cover">
-            <h1 class="cover-heading">Ryan Lewkowicz</h1>
-            <img src="media/ryan.png" class="img-circle img-responsive">
-          </div>
-        </div>
+        <h1 class="cover-heading">Ryan Lewkowicz</h1>
+        <img src="media/ryan.png" class="img-circle img-responsive">
       </div>
       <div class="site-wrapper-lower">
-        <div class="cover-container">
-          <div class="inner cover">
-            <p class="lead">
-              <ul class="nav info-nav">
-                <li class="inactive"><a href="#">Resume</a></li>
-                <li class="inactive"><a href="#">My Card</a></li>
-                <li class="inactive"><a href="#">My Projects</a></li>
-                <li class="inactive"><a href="#">The Old Site</a></li>
-              </ul>
-            </p>
-          </div>
+        <p class="lead">
+          <ul class="nav info-nav">
+            <li class="inactive"><a href="#">Resume</a></li>
+            <li class="inactive active"><a href="#">My Card</a></li>
+            <li class="inactive"><a href="#">My Projects</a></li>
+            <li class="inactive"><a href="#">The Old Site</a></li>
+          </ul>
+        </p>
+      </div>
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h3>HOME</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Menu 1</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
       </div>
     </div>

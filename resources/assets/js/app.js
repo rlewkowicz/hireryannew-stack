@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+require('./navbar.js');
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
