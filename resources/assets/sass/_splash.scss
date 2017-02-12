@@ -1,0 +1,157 @@
+/*
+ * Globals
+ */
+
+*{
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+  background-size: cover;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+
+.site-wrapper-upper{
+  display: block;
+  padding-top: 200px;
+}
+
+.img-circle{
+  width: 30%;
+  display: table-cell;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.site-wrapper-lower {
+  display: table-row;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+  width:100%;
+}
+
+
+
+.info-nav > li + li {
+  margin-left: 0px;
+}
+.info-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: $brand-primary;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+}
+.info-nav > li > a:hover,
+.info-nav > li > a:focus {
+  border-bottom-color: $brand-primary;
+}
+.info-nav > .active > a,
+.info-nav > .active > a:hover,
+.info-nav > .active > a:focus {
+  color: $brand-primary;
+  background-color: transparent;
+}
+.info-nav > .inactive > a,
+.info-nav > .inactive > a:hover,
+.info-nav > .inactive > a:focus {
+  color: $brand-primary;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  ul.info-nav { text-align: center; }
+  ul.info-nav > li {
+    display: inline-block;
+    margin: 0 4% 0 4%;
+  }
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-lower {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
+ul{
+  list-style-type: none;
+}
