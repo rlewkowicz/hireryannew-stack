@@ -85,9 +85,31 @@ body {
 
 .site-wrapper-lower {
   width: 100%;
-
   display: table;
 }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.tabs-wrapper{
+
+  width: 10%;
+  display: table-cell;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .cover-container {
   margin-right: auto;
   margin-left: auto;
@@ -103,7 +125,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: $brand-primary;
-  border-bottom: 1px solid transparent;
+  //border-bottom: 1px solid transparent;
   background-color: transparent;
 }
 .info-nav > li > a:hover,
@@ -119,8 +141,12 @@ body {
 .info-nav > .inactive > a,
 .info-nav > .inactive > a:hover,
 .info-nav > .inactive > a:focus {
+  outline: none;
   color: $brand-primary;
   background-color: transparent;
+}
+.ui-state-active > a {
+  border-bottom: 1px solid $brand-primary;
 }
 
 @media (min-width: 768px) {
