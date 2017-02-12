@@ -51,13 +51,23 @@
           </div>
         </div>
         <div id="menu3">
-          <div class="github-wrap">
-            <img src="media/GitHub_Logo.png" class="img-responsive">
+            <div class="github-wrap">
+              <a class="git-anchor" href="https://github.com/rlewkowicz">
+              <img src="media/GitHub_Logo.png" class="img-responsive">            </a>
+
+            </div>
+          <div class="row-one project">
+            <h2>Mediawiki and Docker</h2>
+            <h2>Jenkins CI/CD</h2>
+            <a href="http://binaryoasis.com:8000/">Project Compendium</a>
+            <a href="http://jenkins.binaryoasis.com/">My Jenkins Builder</a>
+            <p>
+              Mediawiki is the world's largest enterprise wiki platform. It can be less than trivial to install only minus the fact that I've made it very easy. This is the project overview.
+            </p>
+            <p>
+              Jenkins is a swiss army knife of sorts used predominantly with CI/CD. I use it against a number of forked repos to keep my docker images up to date with the needed dependencies.
+            </p>
           </div>
-
-          <p>Mediawiki and Docker</p>
-
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
         <div id="menu4">
           <h3>Menu 3</h3>

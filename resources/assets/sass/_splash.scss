@@ -176,26 +176,59 @@ body {
 }
 
 #menu3{
+  display: table;
+  width: 100%;
+  height: 1000px; /* for demo only */
+  border: 1px dotted blue;
+}
+
+.row-one {
+    padding: 10px;
+    border: 1px dashed gray;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu3 > div > h2 {
+   width: 500px;
+   height: 500px;
+   background-color: red;
+   display: table-cell;
+   vertical-align: top; /* Removes the extra white space below the baseline */
+
+}
+#menu3 > div > p {
+  font-size: 1.5em;
+  width: 700px;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  display: table-cell;
+  vertical-align: top;
+}
+.project > a {
+  font-size: 1.5em;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+.github-wrap{
+  padding-top: 26px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 200px;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  text-align: center;
-
 }
 
-#menu3 > p {
-  width: 40%;
+.git-anchor{
   display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.github-wrap{
-  padding-top: 19px;
-  width: 200px;
-  display: table;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 
