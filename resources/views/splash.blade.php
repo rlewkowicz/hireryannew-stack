@@ -54,6 +54,9 @@
           <div class="github-wrap">
             <img src="media/GitHub_Logo.png" class="img-responsive">
           </div>
+
+          <p>Mediawiki and Docker</p>
+
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
         <div id="menu4">
