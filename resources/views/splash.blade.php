@@ -51,22 +51,28 @@
           </div>
         </div>
         <div id="menu3">
-            <div class="github-wrap">
-              <a class="git-anchor" href="https://github.com/rlewkowicz">
-              <img src="media/GitHub_Logo.png" class="img-responsive">            </a>
-
-            </div>
+          <div class="github-wrap">
+            <a class="git-anchor" href="https://github.com/rlewkowicz">
+              <img src="media/GitHub_Logo.png" class="img-responsive">
+            </a>
+          </div>
           <div class="row-one project">
-            <h2>Mediawiki and Docker</h2>
-            <h2>Jenkins CI/CD</h2>
-            <a href="http://binaryoasis.com:8000/">Project Compendium</a>
-            <a href="http://jenkins.binaryoasis.com/">My Jenkins Builder</a>
-            <p>
-              Mediawiki is the world's largest enterprise wiki platform. It can be less than trivial to install only minus the fact that I've made it very easy. This is the project overview.
-            </p>
-            <p>
-              Jenkins is a swiss army knife of sorts used predominantly with CI/CD. I use it against a number of forked repos to keep my docker images up to date with the needed dependencies.
-            </p>
+            <div class="table">
+              <h2>Mediawiki and Docker</h2>
+              <h2>Jenkins CI/CD</h2>
+            </div>
+            <div class="table">
+              <a href="http://binaryoasis.com:8000/">Project Compendium</a>
+              <a href="http://jenkins.binaryoasis.com/">My Jenkins Builder</a>
+            </div>
+            <div class="table">
+              <p>
+                Mediawiki is the world's largest enterprise wiki platform. It can be less than trivial to install only minus the fact that I've made it very easy. This is the project overview.
+              </p>
+              <p>
+                Jenkins is a swiss army knife of sorts used predominantly with CI/CD. I use it against a number of forked repos to keep my docker images up to date with the needed dependencies.
+              </p>
+            </div>
           </div>
         </div>
         <div id="menu4">
