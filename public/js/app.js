@@ -14013,45 +14013,25 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {
-$(document).ready(function () {
-	$(".single-item").slick({
-		dots: true,
-		lazyLoad: 'progressive',
-		responsive: [{
-			breakpoint: 900,
-			settings: {
-				slidesToShow: 1,
-				dots: false,
-				infinite: false,
-				mobileFirst: true,
-				arrows: false
-			}
-		}]
-	});
-
-	$("a").click(function () {
-		$slick_slider = $('.slider');
-		settings = {
-			// some settings
-		};
-		$slick_slider.slick(settings);
-		if ($slick_slider.hasClass('slick-initialized')) {
-			$slick_slider.slick('unslick');
-		}
-
-		if (!$slick_slider.hasClass('slick-initialized')) {
-			return $slick_slider.slick(settings);
-		}
-	});
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
+    function createSlick() {
+        $(".single-item").not('.slick-initialized').slick({
+            dots: true,
+            lazyLoad: 'progressive',
+            waitForAnimate: false,
+            responsive: [{
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                    dots: false,
+                    infinite: false,
+                    mobileFirst: true,
+                    arrows: false
+                }
+            }]
+        });
+    }
+    createSlick();
 
     if (sessionStorage.getItem("selectedTab1") === null) {
 
@@ -14060,13 +14040,22 @@ $(document).ready(function () {
 
     $('.site-wrapper').tabs({
         activate: function activate(event, ui) {
-
+            $slick_slider = $('.single-item');
+            $slick_slider.slick('unslick');
+            createSlick();
             sessionStorage.selectedTab1 = ui.newTab.index();
         },
         collapsible: false,
         active: sessionStorage.selectedTab1
     });
 });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
