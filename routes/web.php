@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('splash');
 });
+
+Route::get('/create', function () {
+    return view('create');
+});
+
+Route::get('/company', function () {
+    return view('create');
+});
