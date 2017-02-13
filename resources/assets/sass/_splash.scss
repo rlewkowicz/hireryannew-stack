@@ -207,17 +207,17 @@ body {
 #menu3 > div > div > p {
   font-size: 1.5em;
   width: 300px;
-  text-align: justify;
+  text-align:center;
   display: table-cell;
   vertical-align: top;
   line-height: 1;
 }
 #menu3 > div > div > *:first-child{
-  border-right: 50px solid transparent;
+  border-right: 60px solid transparent;
 }
 
 #menu3 > div > div > *:last-child {
-  border-left: 50px solid transparent;
+  border-left: 60px solid transparent;
 }
 
 .project > div > a {
