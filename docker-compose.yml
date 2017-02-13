@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   phpfpm:
-    image: grossphpimage
+    image: rlewkowicz/grossphpimage
     command: "/usr/sbin/php-fpm7.0 --nodaemonize --fpm-config /usr/etc/php-fpm.conf"
     volumes:
     - "./hireryan:/var/www/hireryan"
@@ -12,7 +12,7 @@ services:
   nginx:
     image: nginx:1.10
     ports:
-    - "800:80"
+    - "80:80"
     - "443:443"
     volumes:
     - "./nginx:/etc/nginx"
