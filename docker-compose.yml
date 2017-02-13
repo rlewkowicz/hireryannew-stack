@@ -1,42 +1,37 @@
-version: '2'
+version: '2.1'
 services:
   phpfpm:
-    image: rlewkowicz/php-fpm:7.0.13
+    image: grossphpimage
+    command: "/usr/sbin/php-fpm7.0 --nodaemonize --fpm-config /usr/etc/php-fpm.conf"
     volumes:
-    - "./distribution-files/etc:/usr/local/etc"
-    - "./distribution-files/mwcore/mediawiki:/var/www/mediawiki"
+    - "./hireryan:/var/www/hireryan"
+    - "./etc:/usr/etc"
     - "/etc/passwd:/etc/passwd:ro"
     - "/etc/shadow:/etc/shadow:ro"
     - "/etc/group:/etc/group:ro"
   nginx:
     image: nginx:1.10
     ports:
-    - "80:80"
+    - "800:80"
     - "443:443"
     volumes:
-    - "./distribution-files/nginx:/etc/nginx"
-    - "./distribution-files/mwcore/mediawiki:/var/www/mediawiki"
+    - "./nginx:/etc/nginx"
+    - "./hireryan:/var/www/hireryan"
     - "/etc/passwd:/etc/passwd:ro"
     - "/etc/shadow:/etc/shadow:ro"
     - "/etc/group:/etc/group:ro"
     depends_on:
     - phpfpm
-    - parsoid
   mysql:
     image: mariadb:10.0
     volumes:
-    - "./distribution-files/mysql:/var/lib/mysql"
+    - "./mysql:/var/lib/mysql"
     environment:
     - MYSQL_ROOT_PASSWORD=@6gRzU2k8%
     - MYSQL_USER=root@myadmin
     - MYSQL_PASSWORD=@6gRzU2k8%
     depends_on:
     - nginx
-  parsoid:
-    image: rlewkowicz/parsoid:latest
-    volumes:
-    - "./distribution-files/parsoid/config.yaml:/usr/local/lib/node_modules/parsoid/config.yaml"
-    hostname: parsoid
   myadmin:
     image: phpmyadmin/phpmyadmin
     ports:
