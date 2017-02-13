@@ -1,0 +1,4 @@
+[submodule "docker-mediawiki-core"]
+  path = hireryan
+  url = "https://github.com/rlewkowicz/hireryannew.git"
+  branch = master
