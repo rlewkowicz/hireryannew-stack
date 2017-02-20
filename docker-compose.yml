@@ -1,5 +1,20 @@
 version: '2.1'
 services:
+  traefik:
+    image: traefik
+    command: "--docker --docker.watch --web --configFile=/traefik.toml"
+    volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - "./traefik/traefik.toml:/traefik.toml"
+    - "./nginx/ssl/wildcard.cert:/traefik.crt"
+    - "./nginx/ssl/wildcard.key:/traefik.key"
+    - "/etc/passwd:/etc/passwd:ro"
+    - "/etc/shadow:/etc/shadow:ro"
+    - "/etc/group:/etc/group:ro"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
   phpfpm:
     image: rlewkowicz/grossphpimage
     command: "/usr/sbin/php-fpm7.0 --nodaemonize --fpm-config /usr/etc/php-fpm.conf"
@@ -11,15 +26,20 @@ services:
     - "/etc/group:/etc/group:ro"
   nginx:
     image: nginx:1.10
-    ports:
-    - "80:80"
-    - "443:443"
+    # ports:
+    # - "80:80"
+    # - "443:443"
     volumes:
     - "./nginx:/etc/nginx"
     - "./hireryan:/var/www/hireryan"
     - "/etc/passwd:/etc/passwd:ro"
     - "/etc/shadow:/etc/shadow:ro"
     - "/etc/group:/etc/group:ro"
+    labels:
+      - traefik.port=80
+      - traefik.protocol=http
+      - "traefik.frontend.entryPoints=http,https"
+      - traefik.frontend.rule=Host:hireryan.today
     depends_on:
     - phpfpm
   mysql:
@@ -34,8 +54,8 @@ services:
     - nginx
   myadmin:
     image: phpmyadmin/phpmyadmin
-    ports:
-    - "8080:80"
+    # ports:
+    # - "8080:80"
     environment:
     - PMA_HOST=mysql
     depends_on:
